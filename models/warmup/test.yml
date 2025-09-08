@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: test
+    config:
+      materialized: table
+      database: FD_IO_RG_DLK
+      schema: DLK_RG_BDA_ACQUISITION
+      tags: daily
+
+    description: Table POC snowflake/dbt
+

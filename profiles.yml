@@ -4,7 +4,8 @@ dbt_rg_snowflake:
     prod:
       type: snowflake
       account: EOJCPHV-ZQ43317
-
+      database: FD_IO_RG_DLK
+      schema: DLK_RG_BDA_ACQUISITION
       # -- Informations sur l'utilisateur et le rôle
       user: ALEXIS.GRAY.EXT
       role: ACCOUNTADMIN
@@ -18,3 +19,6 @@ dbt_rg_snowflake:
       threads: 4
       client_session_keep_alive: False
 
+#git remote add origin https://github.com/alexisgrayext-valiuz/dbt-rg-snowflake.git
+#git branch -M main
+#git push -u origin main
