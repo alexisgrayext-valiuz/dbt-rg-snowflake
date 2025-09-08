@@ -52,6 +52,4 @@ models:
           # This configuration builds every model in the warmup directory into a schema named warmup_<target_schema>
           # learn more about custom schemas: https://docs.getdbt.com/docs/building-a-dbt-project/building-models/using-custom-schemas
           materialized: table
-          database: FD_IO_DLK_RG
-          schema: DLK_RG_BDA_ACQUISITION
           tags: daily
