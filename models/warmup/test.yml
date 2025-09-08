@@ -4,7 +4,7 @@ models:
   - name: test
     config:
       materialized: table
-      database: FD_IO_RG_DLK
+      database: FD_IO_DLK_RG
       schema: DLK_RG_BDA_ACQUISITION
       tags: daily
 

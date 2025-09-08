@@ -1,2 +1,4 @@
 .user.yml
 profiles.yml
+/logs
+/target

@@ -29,9 +29,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 # Configuring seeds 
 # Full documentation: https://docs.getdbt.com/docs/building-a-dbt-project/seeds
-seeds:
+#seeds:
 # This declares that column names in the seed file will not be quoted when the table is created.
-  +quote_columns: false
+#  +quote_columns: false
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -42,24 +42,16 @@ seeds:
 # using the `{{ config(...) }}` macro. 
 models:
   dbt_rg_snowflake:
+  
     # When you rename the project up top, remember to rename it here too. 
-      staging:
-          # Applies to all files under models/staging 
-          +materialized: view
-          # This defaults every model in the staging directory to be materialized as a view in Snowflake. To learn more about materializations: https://docs.getdbt.com/docs/building-a-dbt-project/building-models/materializations
-          schema: staging
-          # This configuration builds every model in the staging directory into a schema named staging_<target_schema>
+      warmup:
+          # Applies to all files under models/warmup 
+          #+materialized: view
+          # This defaults every model in the warmup directory to be materialized as a view in Snowflake. To learn more about materializations: https://docs.getdbt.com/docs/building-a-dbt-project/building-models/materializations
+          #schema: warmup
+          # This configuration builds every model in the warmup directory into a schema named warmup_<target_schema>
           # learn more about custom schemas: https://docs.getdbt.com/docs/building-a-dbt-project/building-models/using-custom-schemas
-          query_tag: dbt_staging
-          # This applies a query tag named `dbt_staging` to any related queries in Snowflake's Query_History
-          # learn more about query tags: https://docs.getdbt.com/reference/resource-configs/snowflake-configs#query-tags
-          snowflake_warehouse: RG_SF_WAREHOUSE
-      marts:
-        core:
-         # Applies to all files under models/marts/core
-          +materialized: table
-          # This defaults every model in the marts/core directory to be materialized as a table in Snowflake
-          query_tag: dbt_marts   
-          # This applies a query tag named `dbt_marts` to any related queries in Snowflake's Query_History       
-
-
+          materialized: table
+          database: FD_IO_DLK_RG
+          schema: DLK_RG_BDA_ACQUISITION
+          tags: daily
