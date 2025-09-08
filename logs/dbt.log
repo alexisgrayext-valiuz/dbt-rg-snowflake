@@ -1688,3 +1688,377 @@ group by a.master_customer_id
 [0m14:36:58.805579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11315e490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131f6690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb9d650>]}
 [0m14:36:58.805823 [debug] [MainThread]: Flushing usage events
 [0m14:36:59.438408 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:40:02.703626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10754fa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109337890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109337b10>]}
+
+
+============================== 14:40:02.706340 | 707b9f77-30c3-439d-bb24-3c2ca32f272e ==============================
+[0m14:40:02.706340 [info ] [MainThread]: Running with dbt=1.10.11
+[0m14:40:02.706605 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'profiles_dir': '/Users/alexis.gray.ext/Projects/dbt-rg-snowflake', 'version_check': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'use_colors': 'True', 'write_json': 'True', 'log_path': '/Users/alexis.gray.ext/Projects/dbt-rg-snowflake/logs', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'debug': 'False', 'introspect': 'True', 'invocation_command': 'dbt run --select tag:daily', 'static_parser': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'log_format': 'default'}
+[0m14:40:03.302110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '707b9f77-30c3-439d-bb24-3c2ca32f272e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082475c0>]}
+[0m14:40:03.324204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '707b9f77-30c3-439d-bb24-3c2ca32f272e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1194986b0>]}
+[0m14:40:03.324670 [info ] [MainThread]: Registered adapter: snowflake=1.10.1
+[0m14:40:03.380859 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m14:40:03.444441 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:40:03.444614 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:40:03.454510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '707b9f77-30c3-439d-bb24-3c2ca32f272e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119449c50>]}
+[0m14:40:03.479018 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/manifest.json
+[0m14:40:03.480031 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/semantic_manifest.json
+[0m14:40:03.489451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '707b9f77-30c3-439d-bb24-3c2ca32f272e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11940ed50>]}
+[0m14:40:03.489630 [info ] [MainThread]: Found 1 model, 596 macros
+[0m14:40:03.489763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '707b9f77-30c3-439d-bb24-3c2ca32f272e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119486f90>]}
+[0m14:40:03.490589 [info ] [MainThread]: 
+[0m14:40:03.490728 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m14:40:03.490840 [info ] [MainThread]: 
+[0m14:40:03.491032 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:40:03.491366 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG'
+[0m14:40:03.521212 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG"
+[0m14:40:03.521400 [debug] [ThreadPool]: On list_FD_IO_DLK_RG: show terse schemas in database FD_IO_DLK_RG
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG"} */
+[0m14:40:03.521509 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:06.559646 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 3.038 seconds
+[0m14:40:06.564081 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG, now list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION)
+[0m14:40:06.579629 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m14:40:06.580082 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */;
+[0m14:40:07.095747 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.515 seconds
+[0m14:40:07.102619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '707b9f77-30c3-439d-bb24-3c2ca32f272e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d53e9c0>]}
+[0m14:40:07.107813 [debug] [Thread-1 (]: Began running node model.dbt_rg_snowflake.test
+[0m14:40:07.108693 [info ] [Thread-1 (]: 1 of 1 START sql table model DLK_RG_BDA_ACQUISITION.test ....................... [RUN]
+[0m14:40:07.109336 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m14:40:07.109748 [debug] [Thread-1 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m14:40:07.117142 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m14:40:07.118712 [debug] [Thread-1 (]: Began executing node model.dbt_rg_snowflake.test
+[0m14:40:07.141092 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_rg_snowflake.test"
+[0m14:40:07.149439 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_rg_snowflake.test"
+[0m14:40:07.150118 [debug] [Thread-1 (]: On model.dbt_rg_snowflake.test: create or replace transient table FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.test
+    
+    
+    
+    as (--CREATE OR REPLACE TABLE FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.agg_ticket_rg AS (
+
+WITH first_ticket as (
+    SELECT master_customer_id,
+           min(purchase_date) as date_first_ticket
+    from FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.tmp_agg_ticket_rg
+    group by master_customer_id
+)
+
+SELECT a.master_customer_id, 
+       
+       min(purchase_date) as date_first_purchase,
+       max(purchase_date) as date_last_purchase,
+       AVG(DATEDIFF(DAY, lag_date_purchase, purchase_date)) as avg_delta_jour,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  amount_including_taxes_web end ) AS amount_including_taxes_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then amount_including_taxes_mag end ) AS amount_including_taxes_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  amount_including_taxes_day end ) AS amount_including_taxes_12m, 
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_ticket_web end ) AS nb_ticket_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_ticket_mag end ) AS nb_ticket_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_ticket end ) AS nb_ticket_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_achat_actif end ) AS nb_achat_actif_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  margin_excluding_taxes end ) as margin_excluding_taxes_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then margin_excluding_taxes_web end ) as margin_excluding_taxes_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then margin_excluding_taxes_mag end ) as margin_excluding_taxes_mag_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte_web end ) AS nb_product_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte_mag end ) AS nb_product_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte end ) AS nb_product_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_art end ) as nb_art_12m,
+       sum(abs(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_retour end )) as nb_retour_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then customer_markdown_including_taxes end ) as customer_markdown_including_taxes_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then customer_discount_including_taxes end ) as customer_discount_including_taxes_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then initial_selling_price end ) as initial_selling_price_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  Total_Discount end )  as Total_Discount_12M,
+
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_0_6m, 
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte else 0 end) AS nb_product_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_art else 0 end) as nb_art_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_0_6m,
+
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_6_12m, 
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte else 0 end) AS nb_product_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_art else 0 end) as nb_art_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then Total_Discount else 0 end) as Total_Discount_6_12m,
+       
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_12m_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_12_18m, 
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte else 0 end) AS nb_product_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_art else 0 end) as nb_art_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then Total_Discount else 0 end) as Total_Discount_12_18m,    
+
+       SUM(case when(purchase_date = date_first_ticket) then amount_including_taxes_day else 0 end) AS amount_including_taxes_first_ticket, 
+       SUM(case when(purchase_date = date_first_ticket) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_first_ticket,
+       SUM(case when(purchase_date = date_first_ticket) then qte else 0 end) AS nb_product_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then nb_art else 0 end) as nb_art_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then initial_selling_price else 0 end) as initial_selling_price_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then Total_Discount else 0 end) as Total_Discount_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then amount_ventes else 0 end) as amount_ventes_first_ticket
+      
+from FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.tmp_agg_ticket_rg a
+left join first_ticket b
+on a.master_customer_id = b.master_customer_id
+
+where purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)
+and purchase_date >= b.date_first_ticket
+group by a.master_customer_id
+
+--)
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "node_id": "model.dbt_rg_snowflake.test"} */;
+[0m14:40:11.513109 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 4.362 seconds
+[0m14:40:11.543335 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '707b9f77-30c3-439d-bb24-3c2ca32f272e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d3f7350>]}
+[0m14:40:11.543918 [info ] [Thread-1 (]: 1 of 1 OK created sql table model DLK_RG_BDA_ACQUISITION.test .................. [[32mSUCCESS 1[0m in 4.43s]
+[0m14:40:11.544338 [debug] [Thread-1 (]: Finished running node model.dbt_rg_snowflake.test
+[0m14:40:11.545256 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:40:11.545506 [debug] [MainThread]: Connection 'model.dbt_rg_snowflake.test' was left open.
+[0m14:40:11.545707 [debug] [MainThread]: On model.dbt_rg_snowflake.test: Close
+[0m14:40:11.732246 [info ] [MainThread]: 
+[0m14:40:11.733191 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.24 seconds (8.24s).
+[0m14:40:11.734284 [debug] [MainThread]: Command end result
+[0m14:40:11.762498 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/manifest.json
+[0m14:40:11.764281 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/semantic_manifest.json
+[0m14:40:11.768947 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/run_results.json
+[0m14:40:11.769151 [info ] [MainThread]: 
+[0m14:40:11.769394 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:40:11.769568 [info ] [MainThread]: 
+[0m14:40:11.769774 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:40:11.773029 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.105378, "process_in_blocks": "0", "process_kernel_time": 0.283275, "process_mem_max_rss": "226721792", "process_out_blocks": "0", "process_user_time": 1.308899}
+[0m14:40:11.773349 [debug] [MainThread]: Command `dbt run` succeeded at 14:40:11.773292 after 9.11 seconds
+[0m14:40:11.773579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d956570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d5f2350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d5f3bb0>]}
+[0m14:40:11.773787 [debug] [MainThread]: Flushing usage events
+[0m14:40:12.482152 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:40:39.760088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107bc7a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090ef890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090efb10>]}
+
+
+============================== 14:40:39.762794 | b57b58dd-d167-4867-91ac-9de828e6d864 ==============================
+[0m14:40:39.762794 [info ] [MainThread]: Running with dbt=1.10.11
+[0m14:40:39.763064 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'version_check': 'True', 'no_print': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'profiles_dir': '/Users/alexis.gray.ext/Projects/dbt-rg-snowflake', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'empty': 'False', 'use_colors': 'True', 'target_path': 'None', 'log_path': '/Users/alexis.gray.ext/Projects/dbt-rg-snowflake/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select tag:daily', 'quiet': 'False', 'static_parser': 'True'}
+[0m14:40:40.380650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b57b58dd-d167-4867-91ac-9de828e6d864', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083fb5c0>]}
+[0m14:40:40.402821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b57b58dd-d167-4867-91ac-9de828e6d864', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f5186b0>]}
+[0m14:40:40.403271 [info ] [MainThread]: Registered adapter: snowflake=1.10.1
+[0m14:40:40.460087 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m14:40:40.521029 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:40:40.521213 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:40:40.531386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b57b58dd-d167-4867-91ac-9de828e6d864', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f4c9c50>]}
+[0m14:40:40.555581 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/manifest.json
+[0m14:40:40.558668 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/semantic_manifest.json
+[0m14:40:40.568711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b57b58dd-d167-4867-91ac-9de828e6d864', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f48ed50>]}
+[0m14:40:40.568894 [info ] [MainThread]: Found 1 model, 596 macros
+[0m14:40:40.569028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b57b58dd-d167-4867-91ac-9de828e6d864', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f50af90>]}
+[0m14:40:40.569883 [info ] [MainThread]: 
+[0m14:40:40.570018 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m14:40:40.570123 [info ] [MainThread]: 
+[0m14:40:40.570316 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:40:40.570658 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG'
+[0m14:40:40.598675 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG"
+[0m14:40:40.598884 [debug] [ThreadPool]: On list_FD_IO_DLK_RG: show terse schemas in database FD_IO_DLK_RG
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG"} */
+[0m14:40:40.598999 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:43.558268 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.959 seconds
+[0m14:40:43.559488 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG, now list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION)
+[0m14:40:43.565334 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m14:40:43.565517 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */;
+[0m14:40:43.755925 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.190 seconds
+[0m14:40:43.758759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b57b58dd-d167-4867-91ac-9de828e6d864', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d329c0>]}
+[0m14:40:43.761189 [debug] [Thread-1 (]: Began running node model.dbt_rg_snowflake.test
+[0m14:40:43.761530 [info ] [Thread-1 (]: 1 of 1 START sql table model DLK_RG_BDA_ACQUISITION.test ....................... [RUN]
+[0m14:40:43.761792 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m14:40:43.761986 [debug] [Thread-1 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m14:40:43.766194 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m14:40:43.766955 [debug] [Thread-1 (]: Began executing node model.dbt_rg_snowflake.test
+[0m14:40:43.784265 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_rg_snowflake.test"
+[0m14:40:43.791335 [debug] [Thread-1 (]: Using snowflake connection "model.dbt_rg_snowflake.test"
+[0m14:40:43.791976 [debug] [Thread-1 (]: On model.dbt_rg_snowflake.test: create or replace transient table FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.test
+    
+    
+    
+    as (--CREATE OR REPLACE TABLE FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.agg_ticket_rg AS (
+
+WITH first_ticket as (
+    SELECT master_customer_id,
+           min(purchase_date) as date_first_ticket
+    from FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.tmp_agg_ticket_rg
+    group by master_customer_id
+)
+
+SELECT a.master_customer_id, 
+       
+       min(purchase_date) as date_first_purchase,
+       max(purchase_date) as date_last_purchase,
+       AVG(DATEDIFF(DAY, lag_date_purchase, purchase_date)) as avg_delta_jour,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  amount_including_taxes_web end ) AS amount_including_taxes_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then amount_including_taxes_mag end ) AS amount_including_taxes_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  amount_including_taxes_day end ) AS amount_including_taxes_12m, 
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_ticket_web end ) AS nb_ticket_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_ticket_mag end ) AS nb_ticket_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_ticket end ) AS nb_ticket_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_achat_actif end ) AS nb_achat_actif_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  margin_excluding_taxes end ) as margin_excluding_taxes_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then margin_excluding_taxes_web end ) as margin_excluding_taxes_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then margin_excluding_taxes_mag end ) as margin_excluding_taxes_mag_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte_web end ) AS nb_product_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte_mag end ) AS nb_product_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte end ) AS nb_product_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_art end ) as nb_art_12m,
+       sum(abs(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_retour end )) as nb_retour_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then customer_markdown_including_taxes end ) as customer_markdown_including_taxes_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then customer_discount_including_taxes end ) as customer_discount_including_taxes_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then initial_selling_price end ) as initial_selling_price_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  Total_Discount end )  as Total_Discount_12M,
+
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_0_6m, 
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte else 0 end) AS nb_product_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_art else 0 end) as nb_art_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_0_6m,
+
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_6_12m, 
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte else 0 end) AS nb_product_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_art else 0 end) as nb_art_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then Total_Discount else 0 end) as Total_Discount_6_12m,
+       
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_12m_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_12_18m, 
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte else 0 end) AS nb_product_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_art else 0 end) as nb_art_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then Total_Discount else 0 end) as Total_Discount_12_18m,    
+
+       SUM(case when(purchase_date = date_first_ticket) then amount_including_taxes_day else 0 end) AS amount_including_taxes_first_ticket, 
+       SUM(case when(purchase_date = date_first_ticket) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_first_ticket,
+       SUM(case when(purchase_date = date_first_ticket) then qte else 0 end) AS nb_product_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then nb_art else 0 end) as nb_art_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then initial_selling_price else 0 end) as initial_selling_price_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then Total_Discount else 0 end) as Total_Discount_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then amount_ventes else 0 end) as amount_ventes_first_ticket
+      
+from FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.tmp_agg_ticket_rg a
+left join first_ticket b
+on a.master_customer_id = b.master_customer_id
+
+where purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)
+and purchase_date >= b.date_first_ticket
+group by a.master_customer_id
+
+--)
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "node_id": "model.dbt_rg_snowflake.test"} */;
+[0m14:40:47.585320 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.792 seconds
+[0m14:40:47.621241 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b57b58dd-d167-4867-91ac-9de828e6d864', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ceb350>]}
+[0m14:40:47.621858 [info ] [Thread-1 (]: 1 of 1 OK created sql table model DLK_RG_BDA_ACQUISITION.test .................. [[32mSUCCESS 1[0m in 3.86s]
+[0m14:40:47.622274 [debug] [Thread-1 (]: Finished running node model.dbt_rg_snowflake.test
+[0m14:40:47.623218 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:40:47.623465 [debug] [MainThread]: Connection 'model.dbt_rg_snowflake.test' was left open.
+[0m14:40:47.623658 [debug] [MainThread]: On model.dbt_rg_snowflake.test: Close
+[0m14:40:47.793953 [info ] [MainThread]: 
+[0m14:40:47.794676 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.22 seconds (7.22s).
+[0m14:40:47.795619 [debug] [MainThread]: Command end result
+[0m14:40:47.821253 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/manifest.json
+[0m14:40:47.822468 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/semantic_manifest.json
+[0m14:40:47.826787 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/alexis.gray.ext/Projects/dbt-rg-snowflake/target/run_results.json
+[0m14:40:47.827009 [info ] [MainThread]: 
+[0m14:40:47.827237 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:40:47.827402 [info ] [MainThread]: 
+[0m14:40:47.827584 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:40:47.830560 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.10528, "process_in_blocks": "0", "process_kernel_time": 0.255345, "process_mem_max_rss": "224231424", "process_out_blocks": "0", "process_user_time": 1.277144}
+[0m14:40:47.830817 [debug] [MainThread]: Command `dbt run` succeeded at 14:40:47.830768 after 8.11 seconds
+[0m14:40:47.831017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112e4a570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112de2350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112de3bb0>]}
+[0m14:40:47.831220 [debug] [MainThread]: Flushing usage events
+[0m14:40:48.373000 [debug] [MainThread]: An error was encountered while trying to flush usage events
