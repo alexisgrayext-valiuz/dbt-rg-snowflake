@@ -1,5 +1,8 @@
 .user.yml
-profiles.yml
-/logs
+package-lock.yml
+*env*/
 /target
-logs/dbt.log
+/logs
+.keep
+dbt_packages
+/.idea
