@@ -2062,3 +2062,426 @@ group by a.master_customer_id
 [0m14:40:47.831017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112e4a570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112de2350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112de3bb0>]}
 [0m14:40:47.831220 [debug] [MainThread]: Flushing usage events
 [0m14:40:48.373000 [debug] [MainThread]: An error was encountered while trying to flush usage events
+
+
+============================== 08:03:30.846073 | 459d20c9-75fb-4ff3-98d0-782e28969502 ==============================
+[0m08:03:30.846073 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m08:03:30.847531 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m08:03:31.214283 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m08:03:32.570089 [debug] [Dummy-1   ]: checksum: 6d8301ed5f8f0471e249cbcc8805b42bc5f78a9b258cb4e5c4b012c6ace116b4, vars: {}, profile: , target: prod, version: 1.9.4
+[0m08:03:32.572883 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m08:03:34.497932 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m08:03:34.501637 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m08:03:34.555267 [info ] [Dummy-1   ]: Found 1 model, 591 macros
+[0m08:03:34.558281 [info ] [Dummy-1   ]: 
+[0m08:03:34.559392 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='prod')
+[0m08:03:34.560363 [info ] [Dummy-1   ]: 
+[0m08:03:34.561798 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m08:03:34.564977 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION'
+[0m08:03:34.796160 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m08:03:34.797165 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m08:03:34.798046 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:03:35.323012 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.525 seconds
+[0m08:03:35.328612 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m08:03:35.329511 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+;
+[0m08:03:35.461876 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.131 seconds
+[0m08:03:35.590456 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m08:03:35.591452 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m08:03:35.648154 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.056 seconds
+[0m08:03:35.668355 [debug] [Thread-2 (]: Began running node model.dbt_rg_snowflake.test
+[0m08:03:35.669561 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m08:03:35.670581 [debug] [Thread-2 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m08:03:35.680599 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m08:03:35.682427 [debug] [Thread-2 (]: Began executing node model.dbt_rg_snowflake.test
+[0m08:03:35.683773 [debug] [Thread-2 (]: Finished running node model.dbt_rg_snowflake.test
+[0m08:03:35.688471 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m08:03:35.689322 [debug] [Dummy-1   ]: Connection 'model.dbt_rg_snowflake.test' was properly closed.
+[0m08:03:35.690584 [debug] [Dummy-1   ]: Command end result
+[0m08:03:35.726416 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m08:03:35.729909 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m08:03:35.738713 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m08:03:35.741826 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 4.985241, "process_in_blocks": "0", "process_kernel_time": 1.09, "process_mem_max_rss": "503156", "process_out_blocks": "0", "process_user_time": 8.8}
+[0m08:03:35.742782 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 08:03:35.742444 after 4.99 seconds
+[0m08:03:35.743603 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 01:48:56.149480 | 74682dc3-a48f-40d6-bd0e-b463fc96e50d ==============================
+[0m01:48:56.149480 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m01:48:56.151213 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m01:48:56.542092 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m01:48:58.135714 [debug] [Dummy-1   ]: checksum: 6d8301ed5f8f0471e249cbcc8805b42bc5f78a9b258cb4e5c4b012c6ace116b4, vars: {}, profile: , target: prod, version: 1.9.4
+[0m01:48:58.466357 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:48:58.467319 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:48:58.707923 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m01:48:58.711819 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m01:48:58.769459 [info ] [Dummy-1   ]: Found 1 model, 591 macros
+[0m01:48:58.772574 [info ] [Dummy-1   ]: 
+[0m01:48:58.773720 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='prod')
+[0m01:48:58.774677 [info ] [Dummy-1   ]: 
+[0m01:48:58.776243 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m01:48:58.779570 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION'
+[0m01:48:59.034477 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m01:48:59.035604 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m01:48:59.036541 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:48:59.587958 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.551 seconds
+[0m01:48:59.594397 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m01:48:59.595493 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+;
+[0m01:48:59.715554 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.119 seconds
+[0m01:48:59.718932 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m01:48:59.720091 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m01:48:59.830894 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.110 seconds
+[0m01:48:59.857125 [debug] [Thread-2 (]: Began running node model.dbt_rg_snowflake.test
+[0m01:48:59.858524 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m01:48:59.859726 [debug] [Thread-2 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m01:48:59.870775 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m01:48:59.872575 [debug] [Thread-2 (]: Began executing node model.dbt_rg_snowflake.test
+[0m01:48:59.874074 [debug] [Thread-2 (]: Finished running node model.dbt_rg_snowflake.test
+[0m01:48:59.879420 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m01:48:59.880532 [debug] [Dummy-1   ]: Connection 'model.dbt_rg_snowflake.test' was properly closed.
+[0m01:48:59.881913 [debug] [Dummy-1   ]: Command end result
+[0m01:48:59.920547 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m01:48:59.924530 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m01:48:59.934251 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m01:48:59.942613 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.8925774, "process_in_blocks": "0", "process_kernel_time": 1.19, "process_mem_max_rss": "453604", "process_out_blocks": "0", "process_user_time": 8.27}
+[0m01:48:59.943800 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 01:48:59.943408 after 3.89 seconds
+[0m01:48:59.944718 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 01:58:26.786744 | 8aca45f0-c79b-4474-90e7-a31e1e7dd4eb ==============================
+[0m01:58:26.786744 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m01:58:26.788166 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m01:58:27.148749 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m01:58:28.556098 [debug] [Dummy-1   ]: checksum: 6d8301ed5f8f0471e249cbcc8805b42bc5f78a9b258cb4e5c4b012c6ace116b4, vars: {}, profile: , target: prod, version: 1.9.4
+[0m01:58:28.869353 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:58:28.870198 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:58:29.077479 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m01:58:29.081218 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m01:58:29.135690 [info ] [Dummy-1   ]: Found 1 model, 591 macros
+[0m01:58:29.138500 [info ] [Dummy-1   ]: 
+[0m01:58:29.139536 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='prod')
+[0m01:58:29.140477 [info ] [Dummy-1   ]: 
+[0m01:58:29.141928 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m01:58:29.144700 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION'
+[0m01:58:29.381960 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m01:58:29.382976 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m01:58:29.383783 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:58:30.182453 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.798 seconds
+[0m01:58:30.188136 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m01:58:30.189131 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+;
+[0m01:58:30.297438 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.107 seconds
+[0m01:58:30.300405 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m01:58:30.301322 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m01:58:30.360909 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.059 seconds
+[0m01:58:30.382519 [debug] [Thread-2 (]: Began running node model.dbt_rg_snowflake.test
+[0m01:58:30.383839 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m01:58:30.384800 [debug] [Thread-2 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m01:58:30.395005 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m01:58:30.396623 [debug] [Thread-2 (]: Began executing node model.dbt_rg_snowflake.test
+[0m01:58:30.397934 [debug] [Thread-2 (]: Finished running node model.dbt_rg_snowflake.test
+[0m01:58:30.402712 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m01:58:30.403655 [debug] [Dummy-1   ]: Connection 'model.dbt_rg_snowflake.test' was properly closed.
+[0m01:58:30.404820 [debug] [Dummy-1   ]: Command end result
+[0m01:58:30.439428 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m01:58:30.442667 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m01:58:30.451245 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m01:58:30.455041 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.7595522, "process_in_blocks": "0", "process_kernel_time": 1.23, "process_mem_max_rss": "446216", "process_out_blocks": "0", "process_user_time": 7.35}
+[0m01:58:30.456085 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 01:58:30.455742 after 3.76 seconds
+[0m01:58:30.456964 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 04:32:03.966771 | 359a46be-c093-43ff-b021-82aa50979d2e ==============================
+[0m04:32:03.966771 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m04:32:03.968267 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m04:32:04.351943 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m04:32:05.875195 [debug] [Dummy-1   ]: checksum: 6d8301ed5f8f0471e249cbcc8805b42bc5f78a9b258cb4e5c4b012c6ace116b4, vars: {}, profile: , target: prod, version: 1.9.4
+[0m04:32:06.204739 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m04:32:06.205621 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m04:32:06.441665 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m04:32:06.445657 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m04:32:06.502542 [info ] [Dummy-1   ]: Found 1 model, 591 macros
+[0m04:32:06.505286 [info ] [Dummy-1   ]: 
+[0m04:32:06.506310 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='prod')
+[0m04:32:06.507187 [info ] [Dummy-1   ]: 
+[0m04:32:06.508574 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m04:32:06.511544 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION'
+[0m04:32:06.767297 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m04:32:06.768469 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m04:32:06.769415 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:32:07.350001 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.580 seconds
+[0m04:32:07.356116 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m04:32:07.357209 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+;
+[0m04:32:07.502602 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.144 seconds
+[0m04:32:07.505999 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m04:32:07.507070 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m04:32:07.592870 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.085 seconds
+[0m04:32:07.617517 [debug] [Thread-2 (]: Began running node model.dbt_rg_snowflake.test
+[0m04:32:07.619046 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m04:32:07.620211 [debug] [Thread-2 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m04:32:07.631658 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m04:32:07.633330 [debug] [Thread-2 (]: Began executing node model.dbt_rg_snowflake.test
+[0m04:32:07.634981 [debug] [Thread-2 (]: Finished running node model.dbt_rg_snowflake.test
+[0m04:32:07.640534 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m04:32:07.641539 [debug] [Dummy-1   ]: Connection 'model.dbt_rg_snowflake.test' was properly closed.
+[0m04:32:07.643011 [debug] [Dummy-1   ]: Command end result
+[0m04:32:07.681327 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m04:32:07.684970 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m04:32:07.694368 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m04:32:07.697965 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.8211372, "process_in_blocks": "0", "process_kernel_time": 1.16, "process_mem_max_rss": "455920", "process_out_blocks": "0", "process_user_time": 7.9}
+[0m04:32:07.699210 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 04:32:07.698762 after 3.82 seconds
+[0m04:32:07.700272 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 05:44:41.425685 | f9dbae19-18bf-4123-9745-2cabbd0aaa69 ==============================
+[0m05:44:41.425685 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m05:44:41.427139 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m05:44:41.792608 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m05:44:43.263900 [debug] [Dummy-1   ]: checksum: 6d8301ed5f8f0471e249cbcc8805b42bc5f78a9b258cb4e5c4b012c6ace116b4, vars: {}, profile: , target: prod, version: 1.9.4
+[0m05:44:43.578741 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:44:43.579724 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:44:43.806631 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m05:44:43.810723 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m05:44:43.876149 [info ] [Dummy-1   ]: Found 1 model, 591 macros
+[0m05:44:43.879015 [info ] [Dummy-1   ]: 
+[0m05:44:43.880019 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='prod')
+[0m05:44:43.880888 [info ] [Dummy-1   ]: 
+[0m05:44:43.882265 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m05:44:43.885193 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG'
+[0m05:44:44.118535 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG"
+[0m05:44:44.119529 [debug] [ThreadPool]: On list_FD_IO_DLK_RG: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG"} */
+show terse schemas in database FD_IO_DLK_RG
+    limit 10000
+[0m05:44:44.120334 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:44:44.636219 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.516 seconds
+[0m05:44:44.641476 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION'
+[0m05:44:44.658006 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m05:44:44.659070 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m05:44:44.659940 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:44:45.151401 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.491 seconds
+[0m05:44:45.157113 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m05:44:45.158121 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+;
+[0m05:44:45.308316 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.149 seconds
+[0m05:44:45.311718 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m05:44:45.312609 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m05:44:45.399129 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.085 seconds
+[0m05:44:45.419914 [debug] [Thread-2 (]: Began running node model.dbt_rg_snowflake.test
+[0m05:44:45.421180 [info ] [Thread-2 (]: 1 of 1 START sql table model DLK_RG_BDA_ACQUISITION.test ....................... [RUN]
+[0m05:44:45.422376 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m05:44:45.423296 [debug] [Thread-2 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m05:44:45.433751 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m05:44:45.435247 [debug] [Thread-2 (]: Began executing node model.dbt_rg_snowflake.test
+[0m05:44:45.477999 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_rg_snowflake.test"
+[0m05:44:45.497610 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_rg_snowflake.test"
+[0m05:44:45.500386 [debug] [Thread-2 (]: On model.dbt_rg_snowflake.test: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "node_id": "model.dbt_rg_snowflake.test"} */
+create or replace transient table FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.test
+         as
+        (--CREATE OR REPLACE TABLE FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.agg_ticket_rg AS (
+
+WITH first_ticket as (
+    SELECT master_customer_id,
+           min(purchase_date) as date_first_ticket
+    from FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.tmp_agg_ticket_rg
+    group by master_customer_id
+)
+
+SELECT a.master_customer_id, 
+       
+       min(purchase_date) as date_first_purchase,
+       max(purchase_date) as date_last_purchase,
+       AVG(DATEDIFF(DAY, lag_date_purchase, purchase_date)) as avg_delta_jour,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  amount_including_taxes_web end ) AS amount_including_taxes_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then amount_including_taxes_mag end ) AS amount_including_taxes_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  amount_including_taxes_day end ) AS amount_including_taxes_12m, 
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_ticket_web end ) AS nb_ticket_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_ticket_mag end ) AS nb_ticket_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_ticket end ) AS nb_ticket_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  nb_achat_actif end ) AS nb_achat_actif_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  margin_excluding_taxes end ) as margin_excluding_taxes_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then margin_excluding_taxes_web end ) as margin_excluding_taxes_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then margin_excluding_taxes_mag end ) as margin_excluding_taxes_mag_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte_web end ) AS nb_product_web_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte_mag end ) AS nb_product_store_12m,
+       SUM(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then qte end ) AS nb_product_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_art end ) as nb_art_12m,
+       sum(abs(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then nb_retour end )) as nb_retour_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then customer_markdown_including_taxes end ) as customer_markdown_including_taxes_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then customer_discount_including_taxes end ) as customer_discount_including_taxes_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then initial_selling_price end ) as initial_selling_price_12m,
+       sum(case when purchase_date < DATEADD(MONTH, 12, b.date_first_ticket) then  Total_Discount end )  as Total_Discount_12M,
+
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_0_6m, 
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_0_6m,
+       SUM(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then qte else 0 end) AS nb_product_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then nb_art else 0 end) as nb_art_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_0_6m,
+       sum(case when(purchase_date < DATEADD(MONTH, 6, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_0_6m,
+
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_6_12m, 
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_6_12m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then qte else 0 end) AS nb_product_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then nb_art else 0 end) as nb_art_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_6_12m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 6, b.date_first_ticket) and purchase_date < DATEADD(YEAR, 1, b.date_first_ticket)) then Total_Discount else 0 end) as Total_Discount_6_12m,
+       
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_web else 0 end) AS amount_including_taxes_web_12m_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_mag else 0 end) AS amount_including_taxes_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then amount_including_taxes_day else 0 end) AS amount_including_taxes_12_18m, 
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket_web else 0 end) AS nb_ticket_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket_mag else 0 end) AS nb_ticket_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_ticket else 0 end) AS nb_ticket_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_achat_actif else 0 end) AS nb_achat_actif_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes_web else 0 end) as margin_excluding_taxes_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then margin_excluding_taxes_mag else 0 end) as margin_excluding_taxes_mag_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte_web else 0 end) AS nb_product_web_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte_mag else 0 end) AS nb_product_store_12_18m,
+       SUM(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then qte else 0 end) AS nb_product_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then nb_art else 0 end) as nb_art_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then abs(nb_retour) else 0 end) as nb_retour_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then initial_selling_price else 0 end) as initial_selling_price_12_18m,
+       sum(case when(purchase_date >= DATEADD(MONTH, 12, b.date_first_ticket) and purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)) then Total_Discount else 0 end) as Total_Discount_12_18m,    
+
+       SUM(case when(purchase_date = date_first_ticket) then amount_including_taxes_day else 0 end) AS amount_including_taxes_first_ticket, 
+       SUM(case when(purchase_date = date_first_ticket) then margin_excluding_taxes else 0 end) as margin_excluding_taxes_first_ticket,
+       SUM(case when(purchase_date = date_first_ticket) then qte else 0 end) AS nb_product_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then nb_art else 0 end) as nb_art_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then customer_markdown_including_taxes else 0 end) as customer_markdown_including_taxes_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then customer_discount_including_taxes else 0 end) as customer_discount_including_taxes_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then initial_selling_price else 0 end) as initial_selling_price_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then Total_Discount else 0 end) as Total_Discount_first_ticket,
+       sum(case when(purchase_date = date_first_ticket) then amount_ventes else 0 end) as amount_ventes_first_ticket
+      
+from FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION.tmp_agg_ticket_rg a
+left join first_ticket b
+on a.master_customer_id = b.master_customer_id
+
+where purchase_date < DATEADD(MONTH, 18, b.date_first_ticket)
+and purchase_date >= b.date_first_ticket
+group by a.master_customer_id
+
+--)
+        );
+[0m05:44:45.502303 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m05:44:52.803658 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 7.301 seconds
+[0m05:44:52.838769 [info ] [Thread-2 (]: 1 of 1 OK created sql table model DLK_RG_BDA_ACQUISITION.test .................. [[32mSUCCESS 1[0m in 7.41s]
+[0m05:44:52.840128 [debug] [Thread-2 (]: Finished running node model.dbt_rg_snowflake.test
+[0m05:44:52.845264 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m05:44:52.846257 [debug] [Dummy-1   ]: Connection 'list_FD_IO_DLK_RG' was properly closed.
+[0m05:44:52.847071 [debug] [Dummy-1   ]: Connection 'model.dbt_rg_snowflake.test' was properly closed.
+[0m05:44:52.847858 [info ] [Dummy-1   ]: 
+[0m05:44:52.848759 [info ] [Dummy-1   ]: Finished running 1 table model in 0 hours 0 minutes and 8.97 seconds (8.97s).
+[0m05:44:52.850057 [debug] [Dummy-1   ]: Command end result
+[0m05:44:52.885289 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m05:44:52.888607 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m05:44:52.896527 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m05:44:52.897399 [info ] [Dummy-1   ]: 
+[0m05:44:52.898480 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m05:44:52.899359 [info ] [Dummy-1   ]: 
+[0m05:44:52.900238 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m05:44:52.903255 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.573424, "process_in_blocks": "0", "process_kernel_time": 1.38, "process_mem_max_rss": "439984", "process_out_blocks": "0", "process_user_time": 7.97}
+[0m05:44:52.904298 [debug] [Dummy-1   ]: Command `cli run` succeeded at 05:44:52.903924 after 11.58 seconds
+[0m05:44:52.905180 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 05:45:26.755271 | dd8cc0fd-ce62-4e11-a567-06244b663c1e ==============================
+[0m05:45:26.755271 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m05:45:26.756760 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m05:45:27.120243 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m05:45:28.534911 [debug] [Dummy-1   ]: checksum: 6d8301ed5f8f0471e249cbcc8805b42bc5f78a9b258cb4e5c4b012c6ace116b4, vars: {}, profile: , target: prod, version: 1.9.4
+[0m05:45:28.849941 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:45:28.850992 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:45:29.075580 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m05:45:29.079118 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m05:45:29.133064 [info ] [Dummy-1   ]: Found 1 model, 591 macros
+[0m05:45:29.135975 [info ] [Dummy-1   ]: 
+[0m05:45:29.136874 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='prod')
+[0m05:45:29.137668 [info ] [Dummy-1   ]: 
+[0m05:45:29.138940 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m05:45:29.141556 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION'
+[0m05:45:29.374277 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m05:45:29.375338 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m05:45:29.376182 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:45:30.709640 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.333 seconds
+[0m05:45:30.715428 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m05:45:30.716380 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+show objects in FD_IO_DLK_RG.DLK_RG_BDA_ACQUISITION
+    limit 10000
+    
+;
+[0m05:45:30.836506 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.119 seconds
+[0m05:45:30.839606 [debug] [ThreadPool]: Using snowflake connection "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"
+[0m05:45:30.840501 [debug] [ThreadPool]: On list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_rg_snowflake", "target_name": "prod", "connection_name": "list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m05:45:31.026010 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.185 seconds
+[0m05:45:31.047100 [debug] [Thread-2 (]: Began running node model.dbt_rg_snowflake.test
+[0m05:45:31.048350 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FD_IO_DLK_RG_DLK_RG_BDA_ACQUISITION, now model.dbt_rg_snowflake.test)
+[0m05:45:31.049290 [debug] [Thread-2 (]: Began compiling node model.dbt_rg_snowflake.test
+[0m05:45:31.059813 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_rg_snowflake.test"
+[0m05:45:31.061374 [debug] [Thread-2 (]: Began executing node model.dbt_rg_snowflake.test
+[0m05:45:31.062740 [debug] [Thread-2 (]: Finished running node model.dbt_rg_snowflake.test
+[0m05:45:31.067597 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m05:45:31.068497 [debug] [Dummy-1   ]: Connection 'model.dbt_rg_snowflake.test' was properly closed.
+[0m05:45:31.069706 [debug] [Dummy-1   ]: Command end result
+[0m05:45:31.106239 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m05:45:31.109803 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m05:45:31.119061 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m05:45:31.122284 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 4.4554396, "process_in_blocks": "0", "process_kernel_time": 1.22, "process_mem_max_rss": "445048", "process_out_blocks": "0", "process_user_time": 7.09}
+[0m05:45:31.123350 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 05:45:31.122949 after 4.46 seconds
+[0m05:45:31.124189 [debug] [Dummy-1   ]: Flushing usage events
